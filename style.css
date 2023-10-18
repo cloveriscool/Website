@@ -67,14 +67,15 @@ a:visited {
 	display:none;
 	font-size: 275%;
 	font-weight: bold;
-	background:#00C8FF;
 	margin:0;
 	width:100%;
 	text-align:center;
 	padding-top:0;
 	/*padding-bottom:5%;*/
 }
-
+#mobileMenu:hover{
+	text-shadow:0 0 10px #00c8ff, 0 0 20px #fff;
+}
 .menuItem {
  	display:inline-block;
 	position:relative;
@@ -91,7 +92,8 @@ a:visited {
 	display:none;
 	position:absolute;
 	margin-top:15px;
-	background:rgba(255,255,255,0.8);
+	background:rgba(255,255,255,1);
+	box-shadow:0 0 5px -4px #000, 0 0 25px -20px #00C8FF;
 	padding:15px;
 	width:250px;
 	left: 0;
@@ -131,7 +133,7 @@ a:visited {
 #content-container {
 	z-index:1;
 	max-width:55%;
-	min-height:600px;
+	min-height:calc(100vh - 700px);
 	background-color: white;
 	margin:auto;
 	padding: 20px 5% 50px;
@@ -226,8 +228,8 @@ a:visited {
 		opacity:0.3;
 	}
     #discordWidget {
-	display:inline;
-	float:none;
+		display:inline;
+		float:none;
 	}
 	#content{
 		width:initial;
@@ -242,15 +244,17 @@ a:visited {
 	}
 	.menuItem {
 		display:inline;
+		position:relative;
 		padding:0;
 		margin:0;
 	}
 
-	.menuItemTitle{ display:none; }
+	.menuItemTitle{
+		display:none;
+	}
 
 	.menuItemContent{
 		display:none; /* Changed by togging the button */
-
 		position:relative;
 		box-sizing:border-box;
 		width:100%;
@@ -258,13 +262,16 @@ a:visited {
 		margin:0;
 		z-index:1;
 		height:100%;
-
-		background:lightgray;
+		box-shadow:none;
 		border-bottom: 1px solid darkgray;
 	}
-
-	#mobileMenu{ display:inline-block; }
-
+	#menu{
+		display:inline;
+		position:relative;
+	}
+	#mobileMenu{
+		display:inline; 
+	}
 	#topContent {
 		max-width:100%;
 	}
